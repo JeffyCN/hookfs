@@ -1,0 +1,10 @@
+#!/bin/sh -ex
+
+export SYS_DIR=$(mktemp -d /tmp/.syspower_XXX)
+
+mount -t sysfs none $SYS_DIR
+
+{
+	hookfs "$SYS_DIR/power" /sys/power -f
+	umount $SYS_DIR
+}&

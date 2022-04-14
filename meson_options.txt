@@ -1,0 +1,8 @@
+option('fuse-version', type: 'combo', choices: ['2', '3', 'auto'],
+       value: 'auto', description: 'Version of libfuse (default: auto)')
+option('config-file', type: 'string', value: '/etc/hookfs.conf',
+       description: 'Config file (default: /etc/hookfs.conf)')
+option('log-file', type: 'string', value: '/var/log/hookfs.log',
+       description: 'Log file (default: /var/log/hookfs.log)')
+option('scripts-dir', type: 'string', value: '/etc/hookfs/',
+       description: 'Scripts dir (default: /etc/hookfs/)')
